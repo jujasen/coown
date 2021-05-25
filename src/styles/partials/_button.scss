@@ -1,0 +1,12 @@
+.button {
+    display: block;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    background-color: $green;
+
+
+    &--center {
+        margin: 0 auto;
+    }
+}

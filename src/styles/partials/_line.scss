@@ -1,0 +1,18 @@
+.line {
+    background-color: $green;
+    height: 1rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+
+    &--s {
+        width: 40%;
+    }
+
+    &--m {
+        width: 60%;
+    }
+
+    &--full {
+        width: 100%;
+    }
+}

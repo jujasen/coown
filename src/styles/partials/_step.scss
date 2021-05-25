@@ -1,0 +1,29 @@
+.step {
+    position: relative;
+    margin-bottom: 2rem;
+  &__title {
+    background-color: $teal;
+    width: 50%;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  &__text {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+    color: $grey;
+    background-color: #fff;
+    position: relative;
+    top: -20px;
+    border-radius: 20px;
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0  10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+  }
+}

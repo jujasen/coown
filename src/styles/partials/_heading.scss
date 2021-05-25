@@ -1,0 +1,33 @@
+.heading {
+    color: black;
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+    &--white {
+        color: #fff;
+    }
+
+    &--green {
+        color: $green;
+    }
+
+    &--grey {
+        color: $grey;
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--capitalize {
+        text-transform: capitalize;
+    }
+
+    &--center {
+        text-align: center;
+    }
+}

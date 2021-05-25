@@ -1,0 +1,23 @@
+.feedback {
+    &__item-bcg {
+        content: "";
+        background-color: $grey;
+        height: 300px;
+        width: 100%;
+    }
+
+    &__img {
+        width: 60px;
+        height: 60px;
+        margin-right: 1rem;
+    }
+
+    &__caption {
+        text-align: left;
+    }
+
+    &__person {
+        font-size: 12px;
+        text-align: right;
+    }
+}

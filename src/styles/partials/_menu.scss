@@ -1,0 +1,23 @@
+.menu {
+    background-image: url('../../img/home.png');
+
+    &__logo {
+        width: 50px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        color: $blue;
+        font-size: 20px;
+        padding: 1rem 0;
+    }
+}
+
+.navbar-dark .navbar-toggler {
+    border: none;
+
+}
+
+.navbar-toggler {
+    padding: 0;
+}
