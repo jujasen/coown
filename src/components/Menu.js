@@ -11,7 +11,8 @@ const Menu = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    <Link className="menu__link" to="/">Home</Link>
+                    <Link className="menu__link" to="/">Hjem</Link>
+                    <Link className="menu__link" to="/apt">Finn Leilighet</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
