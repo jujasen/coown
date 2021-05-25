@@ -7,6 +7,7 @@ import Illustration from '../img/apartment-ill.svg';
 import Heading from '../components/Heading';
 import MapboxGLMap from '../components/MapboxGLMap';
 import data from '../utils/apartments.json';
+import AptRes from '../components/AptRes';
 
 
 const Apartments = () => {
@@ -91,7 +92,7 @@ const Apartments = () => {
                     {filteredData?.map(function (item) {
                         return (
                             <div key={item.id}>
-                               <p>{item.title}</p>
+                               <AptRes item={item}/>
                             </div>
                         )
                     })}

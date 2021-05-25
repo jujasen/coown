@@ -1,4 +1,4 @@
-const Text = (props) => {
+const Button = (props) => {
     const { title, type, center } = props;
 
     return (
@@ -7,4 +7,4 @@ const Text = (props) => {
     );
 }
 
-export default Text;
+export default Button;
