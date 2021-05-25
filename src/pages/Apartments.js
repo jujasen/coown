@@ -1,16 +1,27 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Form from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom';
 import Illustration from '../img/apartment-ill.svg';
 import Heading from '../components/Heading';
-
+import MapboxGLMap from '../components/MapboxGLMap';
+import data from '../utils/apartments.json';
 
 
 const Apartments = () => {
     const [range, setRange] = useState(200000);
     const [area, setArea] = useState('Velg område');
+    const [filteredData, setFilteredData] = useState(data);
+
+    useEffect(() => {
+        if (area !== 'Velg område') {
+            let result = data?.filter((item) => {
+                return item.region.includes(area);
+            })
+            setFilteredData(result);
+        }
+    }, [area])
 
     return (
         <div className="apt page padded">
@@ -69,11 +80,23 @@ const Apartments = () => {
                     <p className="text-center m--none">Opp til {range} kr</p>
                 </Form>
             </div>
-            <div className="m--t-m">
-                <Heading center grey title="Velg område ved å bruke filtrene øverst" />
-                <img src={Illustration} alt="building with trees"></img>
-            </div>
-            
+            {area === 'Velg område' ? 
+                <div className="m--t-m">
+                    <Heading center grey title="Velg område ved å bruke filtrene øverst" />
+                    <img src={Illustration} alt="building with trees"></img>
+                </div>
+                :
+                <div>
+                    <Heading green bold uppercase title={'// ' + area}/>
+                    {filteredData?.map(function (item) {
+                        return (
+                            <div key={item.id}>
+                               <p>{item.title}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+        }
             
         </div>
     );
