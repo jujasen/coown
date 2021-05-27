@@ -1,5 +1,5 @@
 const Subheading = (props) => {
-    const { title, bold, uppercase, capitalize, center, grey, green, teal, nomarg } = props;
+    const { title, bold, uppercase, capitalize, center, grey, green, teal, nomarg, small } = props;
 
     return (
         <h2 className={`subheading 
@@ -11,6 +11,7 @@ const Subheading = (props) => {
         ${green ? 'subheading--green' : ''}
         ${teal ? 'subheading--teal' : ''}
         ${nomarg ? 'm--none' : ''}
+        ${small ? 'subheading--s' : ''}
         `}>{title}</h2>
     );
 }

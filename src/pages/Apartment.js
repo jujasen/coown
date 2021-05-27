@@ -11,21 +11,32 @@ import { useHistory } from "react-router-dom";
 import Heading from '../components/Heading';
 import Subheading from '../components/Subheading';
 import Text from '../components/Text';
+import RoomRes from '../components/RoomRes';
 const Apartment = () => {
 
     const { id } = useParams();
     let history = useHistory();
     const [apt, setApt] = useState();
+    const [sortedRooms, setSortedRooms] = useState();
 
-    console.log(id)
+    console.log(apt)
 
     useEffect(() => {
         data?.map(function (item) {
             if (item.id === Number(id)) {
-                setApt(item)
-            }
+                return setApt(item)
+            } else
+            return false;
         })
-    }, [])
+    }, [id])
+
+    useEffect(() => {
+        let result = apt?.rooms.sort(function (a, b) {
+            return a.id - b.id
+        })
+        setSortedRooms(result);
+
+    }, [apt])
 
 
 
@@ -42,16 +53,22 @@ const Apartment = () => {
                             <Subheading nomarg grey title="Nøkkelinformasjon" />
                         </div>
                         <div className="f f--a-center m--b-s">
-                            <img className="img--xs m--r" src={House}></img>
+                            <img className="img--xs m--r" alt="house" src={House}></img>
                             <p className="m--none">Antall rom: {apt.rooms.length}</p>
                         </div>
                         <div className="f f--a-center">
-                            <img className="img--xs m--r" src={Floors}></img>
+                            <img className="img--xs m--r" alt="floors" src={Floors}></img>
                             <p className="m--none">Etasje: {apt.floor}</p>
                         </div>
                     </div>
                     <Subheading grey title="Om kollektivet"/>
                     <Text small text={apt.description}/>
+                    <Subheading grey title="Rom i kollektivet" />
+                    {sortedRooms?.map(function (room) {
+                        return (
+                            <RoomRes key={room.id} aptId={apt.id} room={room} />
+                        )
+                    })}
                 </div>
 
                 :

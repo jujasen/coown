@@ -2,6 +2,7 @@ import Image from '../img/interior.png';
 import Layout from '../img/layout.svg';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import RoomRes from './RoomRes';
 
 const AptRes = (props) => {
     const { item } = props;
@@ -14,7 +15,7 @@ const AptRes = (props) => {
         })
         setFilteredRooms(result);
 
-    }, [])
+    }, [item.rooms])
 
     useEffect(() => {
         let result = item.rooms.sort(function (a, b) {
@@ -22,7 +23,7 @@ const AptRes = (props) => {
         })
         setLowestPrice(result);
 
-    }, [])
+    }, [item.rooms])
 
     return (
         <Link to={`results/apt/${item.id}`}>

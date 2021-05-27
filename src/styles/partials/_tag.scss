@@ -1,0 +1,12 @@
+.tag {
+    border-radius: 20px;
+    padding: 0.2rem 0.5rem;
+
+    &--true {
+        background-color: $blue;
+    }
+
+    &--false {
+        background-color: rgb(217, 217, 217);
+    }
+}

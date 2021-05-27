@@ -4,7 +4,6 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Form from 'react-bootstrap/Form'
 import Illustration from '../img/apartment-ill.svg';
 import Heading from '../components/Heading';
-import MapboxGLMap from '../components/MapboxGLMap';
 import data from '../utils/apartments.json';
 import AptRes from '../components/AptRes';
 
