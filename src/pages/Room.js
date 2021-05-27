@@ -1,7 +1,9 @@
 import Image from '../img/interior2.svg';
-import Layout from '../img/layout.svg';
 import Coins from '../img/coins-light.svg';
-import Card from '../img/card-light.svg'
+import Sale from '../img/sale.svg';
+import Bid from '../img/bud.svg';
+import Contact from '../img/kontakt.svg';
+import Card from '../img/card-light.svg';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../utils/apartments.json';
@@ -11,32 +13,17 @@ import Heading from '../components/Heading';
 import Subheading from '../components/Subheading';
 import Text from '../components/Text';
 import RoomRes from '../components/RoomRes';
+import Order from '../components/Order';
 
 const Room = () => {
 
     const { id, aptId } = useParams();
     let history = useHistory();
     const [allRooms, setAllRooms] = useState();
+    const [order, setOrder] = useState(false);
     const [room, setRoom] = useState();
     const [apartment, setApartment] = useState();
 
-    // useEffect(() => {
-    //     data?.filter(function (apt) {
-    //         if (apt.id === Number(aptId)) {
-    //             setApartment(apt)
-    //             setAllRooms(apt?.rooms)
-    //             apt.rooms.filter(function (room) {
-    //                 if (room.id === Number(id)) {
-    //                    setRoom(room)
-    //                 } else {
-    //                     return false;
-    //                 }
-    //             })
-    //         } else {
-    //             return false;
-    //         }
-    //     })
-    // }, [id, aptId])
 
     useEffect(() => {
         let apt;
@@ -46,9 +33,7 @@ const Room = () => {
 
         setApartment(apt[0]);
     }, [aptId])
-
-    console.log(apartment?.rooms)
-
+    
     useEffect(() => {
         let room = apartment?.rooms?.filter((room) => {
             return room.id === Number(id);
@@ -60,7 +45,7 @@ const Room = () => {
 
     return (
         <div className="apt page">
-            {room ? console.log(room): ''}
+            {order ? <Order/> : ''}
             {room ?
                 <div className="padded">
                     <div className="m--b" onClick={() => history.goBack()}>Tilbake</div>
@@ -68,7 +53,7 @@ const Room = () => {
                     <img className="m--b" src={Image} alt="interior"></img>
                     <Subheading small nomarg grey title={apartment.title} />
                     <Heading teal bold title={"ROM " + room.id} />
-                    <div className="f f--a-center m--b">
+                    <div className="f f--a-center m--b-s">
                         <img className="img--xs  m--r" src={Coins} alt="coins"></img>
                         <div>
                             <Subheading small nomarg grey title={"Prisantydning"} />
@@ -82,20 +67,25 @@ const Room = () => {
                             <p className="m--none">{"kr " + room.utilities}</p>
                         </div>
                     </div>
-                    {/* <div className="card m--b">
-                        <div className="f f--a-center m--b-s">
-                            <img className="img--xs m--r" src={Key} alt="key"></img>
-                            <Subheading nomarg grey title="Nøkkelinformasjon" />
+                    <div className="card m--b">
+                        <div className="f f--a-center p--b-s border-b">
+                            <img className="img--s m--r" alt="house" src={Sale}></img>
+                            <p className="m--none text">Bestill komplett salgsoppgave</p>
                         </div>
-                        <div className="f f--a-center m--b-s">
-                            <img className="img--xs m--r" alt="house" src={House}></img>
-                            <p className="m--none">Antall rom: {apt.rooms.length}</p>
+                        <div className="f f--a-center p--b-s m--t-s border-b" onClick={() => {
+                            setOrder(true);
+                        }}>
+                            <img className="img--s m--r" alt="floors" src={Contact}></img>
+                            <p className="m--none text">Ta kontakt for spørsmål og visning</p>
                         </div>
-                        <div className="f f--a-center">
-                            <img className="img--xs m--r" alt="floors" src={Floors}></img>
-                            <p className="m--none">Etasje: {apt.floor}</p>
-                        </div>
-                    </div> */}
+                        <a href="https://tryggbudgivning.no/">
+                            <div className="f f--a-center p--b-s m--t-s">
+                                <img className="img--s m--r" alt="floors" src={Bid}></img>
+                                <p className="m--none text">Gi bud</p>
+                            </div>
+                        </a>
+                        
+                    </div>
                     <Subheading grey title="Om rommet" />
                     <Text small text={room.description} />
                     {/* <Subheading grey title="Rom i kollektivet" />

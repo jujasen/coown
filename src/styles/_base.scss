@@ -25,6 +25,13 @@ a:hover {
   }
 }
 
+.text {
+  font-size: 20px;
+}
+
+.border-b {
+  border-bottom: 1px solid rgb(178, 178, 178);
+}
 
 .page {
   padding-top: 66px;
@@ -64,6 +71,10 @@ a:hover {
     margin-top: 2rem;
   }
 
+  &--t-s {
+    margin-top: 1rem;
+  }
+
   &--t-m {
     margin-top: 4rem;
   }
@@ -74,6 +85,44 @@ a:hover {
 
   &--r {
     margin-right: 2rem;
+  }
+}
+
+.p {
+  &--none {
+    padding: 0!important;
+  }
+
+  &--b {
+    padding-bottom: 2rem!important;
+  }
+
+  &--b-s {
+    padding-bottom: 1rem;
+  }
+
+  &--b-m {
+    padding-bottom: 4rem;
+  }
+
+  &--t {
+    padding-top: 2rem;
+  }
+
+  &--t-s {
+    padding-top: 1rem;
+  }
+
+  &--t-m {
+    padding-top: 4rem;
+  }
+
+  &--l {
+    padding-left: 2rem;
+  }
+
+  &--r {
+    padding-right: 2rem;
   }
 }
 
