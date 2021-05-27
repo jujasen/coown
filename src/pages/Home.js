@@ -27,7 +27,7 @@ const Home = () => {
                 <Text text="Alle våre leiligheter er tegnet avledende arkitekter med ett mål for
 øyet; Å gi deg mest mulig ut av
 hver eneste kvadrat meter."/>
-                <Link className="block m--b" to="/leilighet">
+                <Link className="block m--b" to="/results">
                     <Button title="Finn leilighet" center />
                 </Link>
                 <img className="m--b" src={Layout} alt="apartment illustration"></img>

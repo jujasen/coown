@@ -1,0 +1,29 @@
+.aptres {
+    border-bottom: 1px solid $grey;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__region {
+        color: $grey;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__title {
+        color: $teal;
+        margin-top: 0;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    &__layout {
+        width: 50px;
+    }
+
+    &__rooms {
+        color: $teal;
+        font-weight: 700;
+    }
+} 

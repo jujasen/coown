@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Form from 'react-bootstrap/Form'
-import { Link } from 'react-router-dom';
 import Illustration from '../img/apartment-ill.svg';
 import Heading from '../components/Heading';
 import MapboxGLMap from '../components/MapboxGLMap';
@@ -11,7 +10,7 @@ import AptRes from '../components/AptRes';
 
 
 const Apartments = () => {
-    const [range, setRange] = useState(200000);
+    const [range, setRange] = useState(30000000);
     const [area, setArea] = useState('Velg område');
     const [filteredData, setFilteredData] = useState(data);
 

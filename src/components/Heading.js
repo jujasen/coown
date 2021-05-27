@@ -1,5 +1,5 @@
 const Heading = (props) => {
-    const { title, bold, uppercase, capitalize, center, grey, green } = props;
+    const { title, bold, uppercase, capitalize, center, grey, green, teal } = props;
 
     return (
         <h2 className={`heading 
@@ -9,6 +9,7 @@ const Heading = (props) => {
         ${center ? 'heading--center' : ''}
         ${grey ? 'heading--grey' : ''}
         ${green ? 'heading--green' : ''}
+        ${teal ? 'heading--teal' : ''}
         `}>{title}</h2>
     );
 }

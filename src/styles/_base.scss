@@ -10,6 +10,17 @@ img {
   width: 100%;
 }
 
+.img {
+
+  &--xs {
+    width: 25px;
+  }
+
+  &--s {
+    width: 50px;
+  }
+}
+
 .page {
   padding-top: 66px;
 }
@@ -29,11 +40,15 @@ img {
 
 .m {
   &--none {
-    margin: 0;
+    margin: 0!important;
   }
 
   &--b {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem!important;
+  }
+
+  &--b-s {
+    margin-bottom: 1rem;
   }
 
   &--b-m {
@@ -70,6 +85,10 @@ img {
 
   &--j-around {
     justify-content: space-around;
+  }
+
+  &--j-space {
+    justify-content: space-between;
   }
 }
 

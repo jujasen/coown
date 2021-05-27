@@ -1,5 +1,5 @@
 const Text = (props) => {
-    const { text, bold, uppercase, capitalize, center } = props;
+    const { text, bold, uppercase, capitalize, center, small } = props;
 
     return (
         <p className={`text 
@@ -7,6 +7,7 @@ const Text = (props) => {
         ${uppercase ? 'text--uppercase' : ''}
         ${capitalize ? 'text--capitalize' : ''}
         ${center ? 'text--center' : ''}
+        ${small ? 'text--s' : ''}
         `}>{text}</p>
     );
 }
