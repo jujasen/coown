@@ -7,9 +7,14 @@
 
     &__link {
         text-transform: uppercase;
-        color: $blue;
+        color: $blue!important;
         font-size: 20px;
         padding: 1rem 0;
+
+        &:hover {
+            font-weight: 700;
+            color: #fff!important;
+        }
     }
 }
 

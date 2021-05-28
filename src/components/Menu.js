@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Logo from '../img/logo.svg'
+import Logo from '../img/logo.svg';
+import { LinkContainer } from 'react-router-bootstrap'
 
 const Menu = () => {
 
@@ -11,8 +12,12 @@ const Menu = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                    <Link className="menu__link" to="/">Hjem</Link>
-                    <Link className="menu__link" to="/results">Finn Leilighet</Link>
+                    <LinkContainer to="/">
+                        <Nav.Link eventKey="1" className="menu__link">Hjem</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/results">
+                        <Nav.Link eventkey="2" className="menu__link">Finn Leilighet</Nav.Link>
+                    </LinkContainer>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
