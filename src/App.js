@@ -5,6 +5,7 @@ import Menu from './components/Menu';
 import Apartments from './pages/Apartments';
 import Apartment from './pages/Apartment';
 import Room from './pages/Room';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/results/apt/:id' exact component={Apartment} />
         <Route path='/results/apt/:aptId/:id' exact component={Room} />
       </Switch>
+      <Footer/>
     </Router>
     
   );

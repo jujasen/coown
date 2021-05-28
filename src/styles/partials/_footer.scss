@@ -1,0 +1,13 @@
+.footer {
+    background-color: $teal;
+    padding: 1rem;
+
+    &__logo {
+        width: 100px;
+    }
+
+    &__info-text {
+        color: #fff;
+        margin-bottom: 0;
+    }
+}

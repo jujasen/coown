@@ -44,7 +44,7 @@ const Order = (props) => {
                                         className=" form__input form__input--border"
                                         placeholder="Skriv din e-mail"
                                     />
-                                    <p className="form__error">{errors.name}</p>
+                                    <p className="form__error">{errors.email}</p>
                                     <Button title="Send" center type="submit" />
                                 </Form>
                             )}

@@ -7,12 +7,10 @@ import Card from '../img/card-light.svg';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../utils/apartments.json';
-import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 import Heading from '../components/Heading';
 import Subheading from '../components/Subheading';
 import Text from '../components/Text';
-import RoomRes from '../components/RoomRes';
 import Order from '../components/Order';
 import ContactModal from '../components/ContactModal';
 

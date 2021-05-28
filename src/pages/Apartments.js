@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-import Form from 'react-bootstrap/Form'
 import Illustration from '../img/apartment-ill.svg';
 import Heading from '../components/Heading';
 import data from '../utils/apartments.json';
@@ -9,7 +8,6 @@ import AptRes from '../components/AptRes';
 
 
 const Apartments = () => {
-    const [range, setRange] = useState(30000000);
     const [area, setArea] = useState('Velg område');
     const [filteredData, setFilteredData] = useState(data);
 
@@ -67,17 +65,7 @@ const Apartments = () => {
                         }}
                     as="button">Åsane</Dropdown.Item>
                 </DropdownButton>
-                <Form>
-                    <Form.Group controlId="formBasicRange">
-                        <Form.Label className="full-width text-center m--none">Prisantydning</Form.Label>
-                        <Form.Control min="200000" value={range ? range : ''} max="3000000" step="100000" type="range" onChange={(e) => {
-                            console.log(e.target.value)
-                            setRange(e.target.value)
-                        }
-                        } />
-                    </Form.Group>
-                    <p className="text-center m--none">Opp til {range} kr</p>
-                </Form>
+
             </div>
             {area === 'Velg område' ? 
                 <div className="m--t-m">

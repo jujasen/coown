@@ -1,7 +1,7 @@
 import Image from '../img/interior2.svg';
 import Coins from '../img/coins.svg'
 import Layout from '../img/layout.svg';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Subheading from './Subheading';
 

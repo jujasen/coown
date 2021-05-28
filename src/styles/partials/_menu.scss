@@ -9,7 +9,11 @@
         text-transform: uppercase;
         color: $blue!important;
         font-size: 20px;
-        padding: 1rem 0;
+        padding: 1rem;
+
+        &--s {
+            font-size: 15px;
+        }
 
         &:hover {
             font-weight: 700;
