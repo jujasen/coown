@@ -14,13 +14,14 @@ import Subheading from '../components/Subheading';
 import Text from '../components/Text';
 import RoomRes from '../components/RoomRes';
 import Order from '../components/Order';
+import ContactModal from '../components/ContactModal';
 
 const Room = () => {
 
     const { id, aptId } = useParams();
     let history = useHistory();
-    const [allRooms, setAllRooms] = useState();
     const [order, setOrder] = useState(false);
+    const [contact, setContact] = useState(false);
     const [room, setRoom] = useState();
     const [apartment, setApartment] = useState();
 
@@ -45,7 +46,12 @@ const Room = () => {
 
     return (
         <div className="apt page">
-            {order ? <Order/> : ''}
+            {order ? <Order onChildClick={() => {
+                setOrder(false)
+            }}/> : ''}
+            {contact ? <ContactModal onChildClick={() => {
+                setContact(false)
+            }} /> : ''}
             {room ?
                 <div className="padded">
                     <div className="m--b" onClick={() => history.goBack()}>Tilbake</div>
@@ -68,13 +74,19 @@ const Room = () => {
                         </div>
                     </div>
                     <div className="card m--b">
-                        <div className="f f--a-center p--b-s border-b">
+                        <div className="pointer f f--a-center p--b-s border-b"
+                            onClick={() => {
+                                setOrder(true);
+                            }}
+                        >
                             <img className="img--s m--r" alt="house" src={Sale}></img>
                             <p className="m--none text">Bestill komplett salgsoppgave</p>
                         </div>
-                        <div className="f f--a-center p--b-s m--t-s border-b" onClick={() => {
-                            setOrder(true);
-                        }}>
+                        <div className="f f--a-center p--b-s m--t-s border-b pointer"
+                            onClick={() => {
+                                setContact(true);
+                            }}
+                        >
                             <img className="img--s m--r" alt="floors" src={Contact}></img>
                             <p className="m--none text">Ta kontakt for spørsmål og visning</p>
                         </div>

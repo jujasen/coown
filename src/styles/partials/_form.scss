@@ -11,4 +11,9 @@
             border-bottom: 2px solid $grey;
         }
     }
+
+    &__error {
+        font-size: 12px;
+        color: rgb(163, 0, 0);
+    }
 }
