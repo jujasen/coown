@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Heading = (props) => {
     const { title, bold, uppercase, capitalize, center, grey, green, teal } = props;
 
@@ -15,3 +17,7 @@ const Heading = (props) => {
 }
 
 export default Heading;
+
+Heading.propTypes = {
+    title: PropTypes.string,
+};

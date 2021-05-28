@@ -2,6 +2,7 @@ import Image from '../img/interior.png';
 import Layout from '../img/layout.svg';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const AptRes = (props) => {
     const { item } = props;
@@ -45,3 +46,7 @@ const AptRes = (props) => {
 }
 
 export default AptRes;
+
+AptRes.propTypes = {
+    item: PropTypes.object
+};

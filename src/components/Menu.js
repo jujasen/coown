@@ -9,8 +9,6 @@ const Menu = () => {
 
     const [contact, setContact] = useState(false);
 
-    
-
     return (
         <>
             {contact ? <ContactModal onChildClick={() => {

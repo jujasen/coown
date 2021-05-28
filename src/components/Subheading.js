@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Subheading = (props) => {
     const { title, bold, uppercase, capitalize, center, grey, green, teal, nomarg, small } = props;
 
@@ -17,3 +19,7 @@ const Subheading = (props) => {
 }
 
 export default Subheading;
+
+Subheading.propTypes = {
+    title: PropTypes.string
+};

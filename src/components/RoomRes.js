@@ -1,17 +1,12 @@
 import Image from '../img/interior2.svg';
 import Coins from '../img/coins.svg'
 import Layout from '../img/layout.svg';
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Subheading from './Subheading';
+import PropTypes from 'prop-types';
 
 const RoomRes = (props) => {
     const { aptId, room } = props;
-
-    useEffect(() => {
-
-
-    }, [])
 
     return (
         <Link to={`${aptId}/${room.id}`}>
@@ -41,3 +36,8 @@ const RoomRes = (props) => {
 }
 
 export default RoomRes;
+
+RoomRes.propTypes = {
+    aptId: PropTypes.number,
+    room: PropTypes.object
+};

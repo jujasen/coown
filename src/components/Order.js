@@ -6,6 +6,7 @@ import { Formik, Form } from 'formik'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { orderSchema } from '../utils/schemas';
+import PropTypes from 'prop-types';
 
 const Order = (props) => {
 
@@ -58,3 +59,7 @@ const Order = (props) => {
 }
 
 export default Order;
+
+Order.propTypes = {
+    onChildClick: PropTypes.func
+};

@@ -6,8 +6,9 @@ import { Formik, Form } from 'formik'
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { contactSchema } from '../utils/schemas';
+import PropTypes from 'prop-types';
 
-const Order = (props) => {
+const ContactModal = (props) => {
 
     const { onChildClick } = props;
     const [submitted, setSubmitted] = useState(false);
@@ -95,4 +96,8 @@ const Order = (props) => {
     );
 }
 
-export default Order;
+export default ContactModal;
+
+ContactModal.propTypes = {
+    onChildClick: PropTypes.func
+};

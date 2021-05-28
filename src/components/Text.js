@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Text = (props) => {
     const { text, bold, uppercase, capitalize, center, small } = props;
 
@@ -13,3 +15,7 @@ const Text = (props) => {
 }
 
 export default Text;
+
+Text.propTypes = {
+    text: PropTypes.string,
+};

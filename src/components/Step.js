@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Step = (props) => {
     const { title, text } = props;
 
@@ -10,3 +12,8 @@ const Step = (props) => {
 }
 
 export default Step;
+
+Step.propTypes = {
+    title: PropTypes.string,
+    text: PropTypes.string
+};
