@@ -41,32 +41,39 @@ const Apartment = () => {
     return (
         <div className="apt page">
             {apt ?
-                <div className="padded">
+                <div className="padded padding top">
                     <div className="m--b" onClick={() => history.goBack()}>Tilbake</div>
-                    <img className="m--b" src={Image} alt="interior"></img>
+                    <img className=" image image--center m--b" src={Image} alt="interior"></img>
                     <Heading teal bold title={apt.title}/>
-                    <div className="card m--b">
-                        <div className="f f--a-center m--b-s">
-                            <img className="img--xs m--r" src={Key} alt="key"></img>
-                            <Subheading nomarg grey title="Nøkkelinformasjon" />
+                    <div className="flex">
+                        <div className="card m--b marg--r">
+                            <div className="f f--a-center m--b-s">
+                                <img className="img--xs m--r" src={Key} alt="key"></img>
+                                <Subheading nomarg grey title="Nøkkelinformasjon" />
+                            </div>
+                            <div className="f f--a-center m--b-s">
+                                <img className="img--xs m--r" alt="house" src={House}></img>
+                                <p className="m--none">Antall rom: {apt.rooms.length}</p>
+                            </div>
+                            <div className="f f--a-center">
+                                <img className="img--xs m--r" alt="floors" src={Floors}></img>
+                                <p className="m--none">Etasje: {apt.floor}</p>
+                            </div>
                         </div>
-                        <div className="f f--a-center m--b-s">
-                            <img className="img--xs m--r" alt="house" src={House}></img>
-                            <p className="m--none">Antall rom: {apt.rooms.length}</p>
-                        </div>
-                        <div className="f f--a-center">
-                            <img className="img--xs m--r" alt="floors" src={Floors}></img>
-                            <p className="m--none">Etasje: {apt.floor}</p>
+                        <div>
+                            <Subheading grey title="Om kollektivet" />
+                            <Text small text={apt.description} />
                         </div>
                     </div>
-                    <Subheading grey title="Om kollektivet"/>
-                    <Text small text={apt.description}/>
+                    
                     <Subheading grey title="Rom i kollektivet" />
-                    {sortedRooms?.map(function (room) {
-                        return (
-                            <RoomRes key={room.id} aptId={apt.id} room={room} />
-                        )
-                    })}
+                    <div className="flex flex--wrap">
+                        {sortedRooms?.map(function (room) {
+                            return (
+                                <RoomRes key={room.id} aptId={apt.id} room={room} />
+                            )
+                        })}
+                    </div>
                 </div>
 
                 :

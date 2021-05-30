@@ -8,3 +8,9 @@
   -webkit-box-shadow: 0 10px #ccc;
   box-shadow: 0 0 10px #ccc;
 }
+
+@media screen and (min-width: 800px) {
+  .card {
+    min-width: 320px;
+  }
+}

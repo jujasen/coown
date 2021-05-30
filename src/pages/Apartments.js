@@ -22,7 +22,7 @@ const Apartments = () => {
 
     return (
         <div className="apt page padded">
-            <div className="apt__filters f f--a-center f--j-around m--b">
+            <div className="apt__filters f f--a-center f--j-around m--b marg--t">
                 <DropdownButton id="dropdown-item-button" title={area}>
                     <Dropdown.Item
                     onClick={() => {
@@ -68,20 +68,22 @@ const Apartments = () => {
 
             </div>
             {area === 'Velg område' ? 
-                <div className="m--t-m">
+                <div className="m--t-m flex flex--a-center flex--j-center">
                     <Heading center grey title="Velg område ved å bruke filtrene øverst" />
-                    <img src={Illustration} alt="building with trees"></img>
+                    <img className="image" src={Illustration} alt="building with trees"></img>
                 </div>
                 :
                 <div>
                     <Heading green bold uppercase title={'// ' + area}/>
-                    {filteredData?.map(function (item) {
-                        return (
-                            <div key={item.id}>
-                               <AptRes item={item}/>
-                            </div>
-                        )
-                    })}
+                    <div className="flex flex--a-start flex--j-start">
+                        {filteredData?.map(function (item) {
+                            return (
+                                <div key={item.id}>
+                                    <AptRes item={item} />
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
         }
             

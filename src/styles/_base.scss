@@ -153,6 +153,10 @@ a:hover {
   .flex {
     display: flex;
 
+    &--wrap {
+      flex-wrap: wrap;
+    }
+
     &--a-center {
       align-items: center;
     }
@@ -208,7 +212,25 @@ a:hover {
     }
 
     &--r {
-      margin-right: 2rem;
+      margin-right: 2rem!important;
     }
+  }
+
+  .image {
+    max-width: 700px;
+    display: block;
+
+    &--center {
+      margin: 0 auto;
+    }
+  }
+
+  .top {
+    padding-top: 70px;
+  }
+
+  .padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

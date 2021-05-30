@@ -43,7 +43,7 @@ const Room = () => {
     }, [id, apartment])
 
     return (
-        <div className="apt page">
+        <div className="apt page padded">
             {order ? <Order onChildClick={() => {
                 setOrder(false)
             }}/> : ''}
@@ -51,27 +51,36 @@ const Room = () => {
                 setContact(false)
             }} /> : ''}
             {room ?
-                <div className="padded">
+                <div className="padded padding top">
                     <div className="m--b" onClick={() => history.goBack()}>Tilbake</div>
                     <p>{room.title}</p>
-                    <img className="m--b" src={Image} alt="interior"></img>
-                    <Subheading small nomarg grey title={apartment.title} />
-                    <Heading teal bold title={"ROM " + room.id} />
-                    <div className="f f--a-center m--b-s">
-                        <img className="img--xs  m--r" src={Coins} alt="coins"></img>
-                        <div>
-                            <Subheading small nomarg grey title={"Prisantydning"} />
-                            <p className="m--none">{"kr " + room.price}</p>
+                    <img className="image image--center m--b" src={Image} alt="interior"></img>
+                    <div className="flex">
+                        <div className="marg--r">
+                            <Subheading small nomarg grey title={apartment.title} />
+                            <Heading teal bold title={"ROM " + room.id} />
+                        </div>
+                        <div className="flex flex--a-center">
+                            <div className="f f--a-center m--b-s marg--r">
+                                <img className="img--xs  m--r" src={Coins} alt="coins"></img>
+                                <div>
+                                    <Subheading small nomarg grey title={"Prisantydning"} />
+                                    <p className="m--none">{"kr " + room.price}</p>
+                                </div>
+                            </div>
+                            <div className=" marg--b-s f f--a-center m--b">
+                                <img className="img--xs  m--r" src={Card} alt="bankcard"></img>
+                                <div>
+                                    <Subheading small nomarg grey title={"Felleskostnader"} />
+                                    <p className="m--none">{"kr " + room.utilities}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div className="f f--a-center m--b">
-                        <img className="img--xs  m--r" src={Card} alt="bankcard"></img>
-                        <div>
-                            <Subheading small nomarg grey title={"Felleskostnader"} />
-                            <p className="m--none">{"kr " + room.utilities}</p>
-                        </div>
-                    </div>
-                    <div className="card m--b">
+                    
+                    
+                    <div className="flex">
+                    <div className="card m--b marg--r">
                         <div className="pointer f f--a-center p--b-s border-b"
                             onClick={() => {
                                 setOrder(true);
@@ -96,8 +105,11 @@ const Room = () => {
                         </a>
                         
                     </div>
-                    <Subheading grey title="Om rommet" />
-                    <Text small text={room.description} />
+                    <div>
+                            <Subheading grey title="Om rommet" />
+                            <Text small text={room.description} />
+                        </div>
+                    </div>
                     {/* <Subheading grey title="Rom i kollektivet" />
                     {sortedRooms?.map(function (room) {
                         return (
