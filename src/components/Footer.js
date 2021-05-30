@@ -12,16 +12,17 @@ const Footer = () => {
 
     return (
         <>
-                <footer className="footer">
-                    <div className="m--b f f--j-start f--a-center">
-                        <Link to="/">
-                            <img className="footer__logo" src={Logo} alt="logo"></img>
-                        </Link>
-                        <div>
-                            <p className=" m--l footer__info-text">Co-Own AS <br /> Sentrumsbakken 12 <br /> 5000 Bergen</p>
-                        </div>
+            <footer className="footer">
+                <div className="m--b f f--j-start f--a-center flex--j-center">
+                    <Link to="/">
+                        <img className="footer__logo" src={Logo} alt="logo"></img>
+                    </Link>
+                    <div>
+                        <p className=" m--l footer__info-text">Co-Own AS <br /> Sentrumsbakken 12 <br /> 5000 Bergen</p>
                     </div>
-                    <Line medium />
+                </div>
+                <Line medium />
+                <div className="flex flex--j-center flex--a-center">
                     <div>
                         <Nav className="ml-auto">
                             <LinkContainer to="/">
@@ -31,28 +32,30 @@ const Footer = () => {
                                 <Nav.Link className="menu__link menu__link--s">Finn Leilighet</Nav.Link>
                             </LinkContainer>
                         </Nav>
-                        <div>
-                            <p className="footer__info-text m--b-s">
-                                Følg oss
-                            </p>
-                            <div>
-                                <div className="f f--a-center m--b-s">
-                                    <img className="img--s m--r" src={Twitter} alt="twitter" />
-                                    <img
-                                        className="img--s"
-                                        src={In} alt="Linkedin" />
-                                </div>
-                                <div className="f f--a-center">
-                                    <img
-                                        className="img--s m--r"
-                                        src={Fb} alt="Facebook" />
-                                    <img
-                                        className="img--s"
-                                        src={Insta} alt="Instagram" />
-                                </div>
-                            </div>                        </div>
                     </div>
-                </footer>
+                    <div>
+                        <p className="footer__info-text m--b-s">
+                            Følg oss
+                            </p>
+                        <div>
+                            <div className="f f--a-center m--b-s">
+                                <img className="img--s m--r" src={Twitter} alt="twitter" />
+                                <img
+                                    className="img--s"
+                                    src={In} alt="Linkedin" />
+                            </div>
+                            <div className="f f--a-center">
+                                <img
+                                    className="img--s m--r"
+                                    src={Fb} alt="Facebook" />
+                                <img
+                                    className="img--s"
+                                    src={Insta} alt="Instagram" />
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </footer>
         </>
     );
 }

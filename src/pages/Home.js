@@ -11,16 +11,16 @@ import Illustration from '../img/home-ill.svg';
 
 const Home = () => {
 
+
     return (
         <div className="home">
             <div className="home__landing">
                 <h1 className="home__title">Din inngangsbillett til boligmarkedet</h1>
                 <h2 className="home__subtitle">Leiligheten for deg som drømmer om egen bolig men ikke har nok egenkapital</h2>
 
-                <form>
-                    <input className="form__input" placeholder="Søk etter sted"></input>
-                    <Button title="Søk" center type="" submit />
-                </form>
+                <Link className="block m--b" to="/results">
+                    <Button title="Finn leilighet" center />
+                </Link>
             </div>
             <div className="padded">
                 <Heading center title="Smarte leiligheter designet for enmoderne livsstil" />
