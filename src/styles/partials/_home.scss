@@ -24,3 +24,16 @@
     margin-bottom: 1rem;
   }
 }
+
+@media screen and (min-width: 800px) {
+  .home {
+    &__title {
+      font-size: 60px;
+      padding-top: 30vh;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+    }
+  }
+}

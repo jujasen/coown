@@ -15,7 +15,6 @@ a:hover {
 }
 
 .img {
-
   &--xs {
     width: 25px;
   }
@@ -56,15 +55,15 @@ a:hover {
 
 .m {
   &--none {
-    margin: 0!important;
+    margin: 0 !important;
   }
 
   &--b {
-    margin-bottom: 2rem!important;
+    margin-bottom: 2rem !important;
   }
 
   &--b-s {
-    margin-bottom: 1rem!important;
+    margin-bottom: 1rem !important;
   }
 
   &--b-m {
@@ -94,11 +93,11 @@ a:hover {
 
 .p {
   &--none {
-    padding: 0!important;
+    padding: 0 !important;
   }
 
   &--b {
-    padding-bottom: 2rem!important;
+    padding-bottom: 2rem !important;
   }
 
   &--b-s {
@@ -150,3 +149,66 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 800px) {
+  .flex {
+    display: flex;
+
+    &--a-center {
+      align-items: center;
+    }
+
+    &--a-start {
+      align-items: flex-start;
+    }
+
+    &--j-center {
+      justify-content: center;
+    }
+
+    &--j-around {
+      justify-content: space-around;
+    }
+
+    &--j-space {
+      justify-content: space-between;
+    }
+  }
+
+  .marg {
+    &--none {
+      margin: 0 !important;
+    }
+
+    &--b {
+      margin-bottom: 2rem !important;
+    }
+
+    &--b-s {
+      margin-bottom: 1rem !important;
+    }
+
+    &--b-m {
+      margin-bottom: 4rem;
+    }
+
+    &--t {
+      margin-top: 2rem;
+    }
+
+    &--t-s {
+      margin-top: 1rem;
+    }
+
+    &--t-m {
+      margin-top: 4rem;
+    }
+
+    &--l {
+      margin-left: 2rem;
+    }
+
+    &--r {
+      margin-right: 2rem;
+    }
+  }
+}
