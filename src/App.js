@@ -6,11 +6,13 @@ import Apartments from './pages/Apartments';
 import Apartment from './pages/Apartment';
 import Room from './pages/Room';
 import Footer from './components/Footer';
+import Chat from './components/Chat';
 
 function App() {
   return (
     <Router>
       <Menu/>
+      <Chat/>
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/results' exact component={Apartments} />

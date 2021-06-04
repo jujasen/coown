@@ -1,0 +1,105 @@
+.chat {
+  position: fixed;
+  top: 40vh;
+  background-color: #fff;
+  width: 300px;
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: 2px solid $green;
+  height: 400px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  right: 20px;
+
+  &__header {
+    position: fixed;
+    width: 295px;
+    background-color: #fff;
+    top: 40.3vh;
+    right: 22px;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    border-top-right-radius: 20px;
+    padding-bottom: 0.5rem;
+    border-top-left-radius: 20px;
+  }
+
+  &__box {
+    padding-top: 3rem;
+  }
+
+  &__bubble {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 250px;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+
+    &--coown {
+      background-color: lighten($color: $green, $amount: 20%);
+    }
+
+    &--user {
+      background-color: lighten($color: $beige, $amount: 25%);
+      margin-left: 1.9rem;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(142, 142, 142);
+  }
+
+  &__close {
+    width: 30px;
+    cursor: pointer;
+  }
+
+  &__person {
+    width: 30px;
+    margin-right: 1rem;
+  }
+
+  &__name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+
+  &__input {
+      width: 240px;
+      border: 2px solid $beige;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      margin-right: 1rem;
+  }
+
+  &__send {
+      width: 30px;
+      cursor: pointer;
+  }
+
+  &__data {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  &__toggle {
+      width: 30px;
+      position: fixed;
+      top: 95vh;
+      right: 20px;
+  }
+}
