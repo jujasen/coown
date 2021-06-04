@@ -21,7 +21,7 @@ const Order = (props) => {
         <div className="popup">
             <div className=" card popup__card">
                 <img className="img--xs" src={X} alt="cancel" onClick={onChildClick}></img>
-                {submitted ? <Subheading small center green nomarg title="Du vil få tilsendt salgsoppgaven straks" /> :
+                {submitted ? <Subheading padding small center green nomarg title="Du vil få tilsendt salgsoppgaven straks" /> :
                     <>
                         <Subheading small center grey title="Skriv inn din mail for å motta komplett salgsoppgave" />
                         <Formik

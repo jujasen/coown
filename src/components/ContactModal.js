@@ -21,7 +21,7 @@ const ContactModal = (props) => {
         <div className="popup">
             <div className=" card popup__card">
                 <img className="img--xs" src={X} alt="cancel" onClick={onChildClick}></img>
-                {submitted ? <Subheading small center green nomarg title="Vi svarer på din henvendelse inne 1-2 virkedager" /> :
+                {submitted ? <Subheading padding small center green nomarg title="Vi svarer på din henvendelse innen 1-2 virkedager" /> :
                     <>
                         <Subheading small center grey title="Fyll ut skjema så svarer vi deg straks" />
                         <Formik

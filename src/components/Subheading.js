@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Subheading = (props) => {
-    const { title, bold, uppercase, capitalize, center, grey, green, teal, nomarg, small } = props;
+    const { title, bold, uppercase, capitalize, center, grey, green, teal, nomarg, small, padding } = props;
 
     return (
         <h2 className={`subheading 
@@ -14,6 +14,7 @@ const Subheading = (props) => {
         ${teal ? 'subheading--teal' : ''}
         ${nomarg ? 'm--none' : ''}
         ${small ? 'subheading--s' : ''}
+        ${padding ? 'subheading--pad' : ''}
         `}>{title}</h2>
     );
 }

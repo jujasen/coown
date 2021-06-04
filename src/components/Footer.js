@@ -10,8 +10,10 @@ import In from '../img/linkedin.svg';
 
 const Footer = () => {
 
+
     return (
         <>
+        
             <footer className="footer">
                 <div className="m--b f f--j-start f--a-center flex--j-center">
                     <Link to="/">
@@ -22,14 +24,14 @@ const Footer = () => {
                     </div>
                 </div>
                 <Line medium />
-                <div className="flex flex--j-center flex--a-center">
+                <div className="f f--j-space f--a-center flex flex--j-space flex--a-center">
                     <div>
                         <Nav className="ml-auto">
                             <LinkContainer to="/">
-                                <Nav.Link className="menu__link menu__link--s">Hjem</Nav.Link>
+                                <Nav.Link className="menu__link menu__link--s footer__link">Hjem</Nav.Link>
                             </LinkContainer>
                             <LinkContainer to="/results">
-                                <Nav.Link className="menu__link menu__link--s">Finn Leilighet</Nav.Link>
+                                <Nav.Link className="menu__link menu__link--s footer__link">Finn Leilighet</Nav.Link>
                             </LinkContainer>
                         </Nav>
                     </div>
@@ -52,7 +54,7 @@ const Footer = () => {
                                     className="img--s"
                                     src={Insta} alt="Instagram" />
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </footer>
