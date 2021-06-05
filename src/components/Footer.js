@@ -35,7 +35,7 @@ const Footer = () => {
                             </LinkContainer>
                         </Nav>
                     </div>
-                    <div>
+                    <div className="m--b">
                         <p className="footer__info-text m--b-s">
                             Følg oss
                             </p>
@@ -57,6 +57,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
+                <p className="footer__info-text m--b-s">All images from CoOwn are from a previous assignment at Noroff</p>
             </footer>
         </>
     );
