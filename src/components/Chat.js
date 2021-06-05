@@ -3,6 +3,7 @@ import Person from '../img/person.png'
 import Send from '../img/send.png';
 import Bubble from '../img/chat.svg'
 import { useState, useRef } from 'react';
+import uuid from 'react-uuid'
 
 const Chat = () => {
     const [toggleChat, setToggleChat] = useState(false);
@@ -33,7 +34,7 @@ const Chat = () => {
                             </div>
                         </div>
                             {messages.map(entry =>
-                                <div key={entry} className="chat__bubble chat__bubble--user">
+                                <div key={uuid()} className="chat__bubble chat__bubble--user">
                                     <div>
                                         <h5 className="chat__name">Deg</h5>
                                         <p className="chat__text">{entry}</p>
