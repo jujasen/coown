@@ -57,7 +57,8 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <p className="footer__info-text m--b-s">All images from CoOwn are from a previous assignment at Noroff</p>
+                <p className="footer__info-text m--b-s">All images from CoOwn are from a previous assignment at Noroff in which CoOwn gave permission to use them in projects</p>
+                <p className="footer__info-text m--b-s">Other images from Pixabay & icons from Adobe XD free icons plugins</p>
             </footer>
         </>
     );
