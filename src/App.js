@@ -7,12 +7,14 @@ import Apartment from './pages/Apartment';
 import Room from './pages/Room';
 import Footer from './components/Footer';
 import Chat from './components/Chat';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
     <Router>
       <Menu/>
       <Chat/>
+      <ScrollToTop/>
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/results' exact component={Apartments} />
