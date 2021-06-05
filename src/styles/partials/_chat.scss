@@ -1,7 +1,7 @@
 .chat {
   z-index: 999;
   position: fixed;
-  top: 40vh;
+  top: 35vh;
   background-color: #fff;
   width: 300px;
   padding: 0.5rem;
@@ -19,7 +19,7 @@
     position: fixed;
     width: 295px;
     background-color: #fff;
-    top: 40.3vh;
+    top: 35.3vh;
     right: 22px;
     padding-top: 0.5rem;
     padding-left: 1rem;
@@ -104,7 +104,7 @@
     background-color: #fff;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-    top: 80vh;
+    top: 75vh;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -112,7 +112,7 @@
   &__toggle {
     width: 30px;
     position: fixed;
-    top: 92vh;
+    top: 87vh;
     right: 20px;
     z-index: 999;
   }
