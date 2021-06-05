@@ -1,6 +1,6 @@
 .chat {
   position: fixed;
-  top: 40vh;
+  top: 43vh;
   background-color: #fff;
   width: 300px;
   padding: 0.5rem;
@@ -12,12 +12,13 @@
   flex-direction: column;
   justify-content: space-between;
   right: 20px;
+  padding-bottom: 70px;
 
   &__header {
     position: fixed;
     width: 295px;
     background-color: #fff;
-    top: 40.3vh;
+    top: 43.3vh;
     right: 22px;
     padding-top: 0.5rem;
     padding-left: 1rem;
@@ -46,6 +47,10 @@
     &--user {
       background-color: lighten($color: $beige, $amount: 25%);
       margin-left: 1.9rem;
+
+      &:last-child {
+          margin-bottom: 30px;
+      }
     }
   }
 
@@ -78,28 +83,41 @@
   }
 
   &__input {
-      width: 240px;
-      border: 2px solid $beige;
-      border-radius: 20px;
-      padding: 0.5rem 1rem;
-      margin-right: 1rem;
+    width: 240px;
+    border: 2px solid $beige;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
   }
 
   &__send {
-      width: 30px;
-      cursor: pointer;
+    width: 30px;
+    cursor: pointer;
   }
 
   &__data {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background-color: #fff;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    top: 83vh;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   &__toggle {
-      width: 30px;
-      position: fixed;
-      top: 95vh;
-      right: 20px;
+    width: 30px;
+    position: fixed;
+    top: 95vh;
+    right: 20px;
+  }
+
+  &__btn {
+    border: none;
+    background-color: #fff;
+    padding: 0;
   }
 }
